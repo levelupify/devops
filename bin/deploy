@@ -15,6 +15,11 @@ path="/opt/www/${org}/${repo}/${target}"
 working_path="${path}/current"
 
 # --------- DON'T TOUCH BELOW ------------
+
+#########
+# setup #
+#########
+
 orig_pwd="$(pwd)"
 user="$(whoami)"
 deploy_key="/home/${user}/.ssh/${org}-deploy-key"
@@ -30,25 +35,23 @@ fi
 
 date=$(date "+%Y-%b-%d-%H-%M-%N")
 
+# Sanity check and default assignment for "mode"
 if [ "${mode}" != "update" -a "${mode}" != "clone" ]
 then
   mode="update"
 fi
 
+# Sanity check for "target"
 if [ "${target}" != "prod" -a "${target}" != "staging" -a "${target}" != "dev" ]
 then
   output "Unknown target '${target}', exiting prematurely."
   exit 29
 fi
 
-# echo "org: ${org}"
-# echo "repo: ${repo}"
-# echo "mode: ${mode}"
 
-
-###################
-# Functions below #
-###################
+#############
+# functions #
+#############
 
 function output {
   output_text="${1}"
@@ -68,10 +71,10 @@ function clone {
   fi
 }
 
-#################
-# End functions #
-#################
 
+##############
+# main logic #
+##############
 
 output "DEPLOYING '${org_and_repo}' to '${target}'..."
 output ""
@@ -130,10 +133,10 @@ deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
   output "Found deploy script (${deploy_script}), handing over control..."
-  # chmod u+x "${deploy_script}"
+  cd "${working_path}"
   ${deploy_script}    
 else
   output "No deploy script found in ${deploy_script}, done!"
 fi
 
-
+cd "${orig_pwd}"
