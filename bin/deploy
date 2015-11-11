@@ -1,0 +1,109 @@
+#!/bin/bash
+set -e
+
+# Config here
+org_and_repo="${1}"
+mode="${2}"
+IFS='/' read -ra org_and_repo_arr <<< "${org_and_repo}"
+org="${org_and_repo_arr[0]}"
+repo="${org_and_repo_arr[1]}"
+
+repo_web_path="https://bitbucket.org/${org_and_repo}"
+repo_git_path="git@bitbucket.org:${org_and_repo}.git"
+path="/opt/www/${org}/${repo}"
+working_path="${path}/current"
+
+# --------- DON'T TOUCH BELOW ------------
+orig_pwd="$(pwd)"
+user="$(whoami)"
+quiet_option=""
+quiet_suffix=""
+if [ "${3}" != "" ]
+then
+  quiet_option=" -q "
+  quiet_suffix=" > /dev/null 2>&1 "
+fi
+
+date=$(date "+%Y-%b-%d-%H-%M-%N")
+
+if [ "${mode}" != "update" -a "${mode}" != "clone" ]
+then
+  mode="xupdate"
+fi
+
+echo "org: ${org}"
+echo "repo: ${repo}"
+echo "mode: ${mode}"
+
+
+if [ ! -d ${path} ]
+then
+  mkdir -p ${path}
+  chown levelup:levelup ${path}
+fi
+
+if [ $mode == "update" ]
+then
+
+  if [ -L ${working_path} ]
+  then
+    rm ${working_path}
+  fi
+  if [ ! -d ${working_path} ]
+  then
+    mkdir -p ${working_path}
+    chown levelup:levelup ${working_path}
+  fi
+
+  if [ ! -d "${working_path}/.git" ]
+  then
+    clone "${working_path}"
+  fi
+  cd "${working_path}"
+  git pull
+
+elif [ $mode == "clone" ]
+then
+
+  cd "${path}"
+  clone "${date}"
+  if [ -L "current" ]
+  then
+    rm "current"
+  fi
+  ln -s "${date}" "current"
+  cd "${orig_pwd}"
+
+else
+  echo "Unknown mode: ${mode}"
+  exit 99
+fi
+
+deploy_script="${working_path}/bin/deploy"
+if [ -r ${deploy_script} ]
+then
+  echo "Found deploy script (${deploy_script}), handing over control..."
+  ${deploy_script}    
+else
+  echo "No deploy script found in ${deploy_script}, done!"
+fi
+
+
+###################
+# Functions below #
+###################
+
+function clone {
+  clone_path="${1}"
+  echo "Cloning ${repo_git_path} into ${clone_path}..."
+  deploy_key="~/.ssh/${org}-deploy-key"
+  if [ -r ${deploy_key} ]
+  then 
+    echo "Using deploy key (${deploy_key})..."
+    ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix}
+    git clone ${quiet_option} ${repo_git_path} ${clone_path}"
+  else
+    echo "No deploy key found in ${deploy_key}, trying auth-less clone..."
+    git clone ${quiet_option} ${repo_web_path}.git ${clone_path}
+  fi
+}
