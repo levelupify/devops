@@ -28,12 +28,12 @@ date=$(date "+%Y-%b-%d-%H-%M-%N")
 
 if [ "${mode}" != "update" -a "${mode}" != "clone" ]
 then
-  mode="xupdate"
+  mode="update"
 fi
 
-echo "org: ${org}"
-echo "repo: ${repo}"
-echo "mode: ${mode}"
+# echo "org: ${org}"
+# echo "repo: ${repo}"
+# echo "mode: ${mode}"
 
 
 if [ ! -d ${path} ]
