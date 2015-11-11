@@ -3,14 +3,15 @@ set -e
 
 # Config here
 org_and_repo="${1}"
-mode="${2}"
+target="${2}"
+mode="${3}"
 IFS='/' read -ra org_and_repo_arr <<< "${org_and_repo}"
 org="${org_and_repo_arr[0]}"
 repo="${org_and_repo_arr[1]}"
 
 repo_web_path="https://bitbucket.org/${org_and_repo}"
 repo_git_path="git@bitbucket.org:${org_and_repo}.git"
-path="/opt/www/${org}/${repo}/prod"
+path="/opt/www/${org}/${repo}/${target}"
 working_path="${path}/current"
 
 # --------- DON'T TOUCH BELOW ------------
@@ -32,6 +33,12 @@ date=$(date "+%Y-%b-%d-%H-%M-%N")
 if [ "${mode}" != "update" -a "${mode}" != "clone" ]
 then
   mode="update"
+fi
+
+if [ "${target}" != "prod" -a "${target}" != "staging" -a "${target}" != "dev" ]
+then
+  output "Unknown target '${target}', exiting prematurely."
+  exit 29
 fi
 
 # echo "org: ${org}"
@@ -65,6 +72,9 @@ function clone {
 # End functions #
 #################
 
+
+output "DEPLOYING '${org_and_repo}' to '${target}'..."
+output ""
 
 if [ ! -d "${path}" ]
 then
