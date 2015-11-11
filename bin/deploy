@@ -37,18 +37,27 @@ fi
 # echo "mode: ${mode}"
 
 
+###################
+# Functions below #
+###################
+
 function clone {
   clone_path="${1}"
-  echo "Cloning ${repo_git_path} into ${clone_path}..."
+  echo "> Cloning ${repo_git_path} into ${clone_path}..."
   if [ -r ${deploy_key} ]
   then 
-    echo "Using deploy key (${deploy_key})..."
+    echo "> Using deploy key (${deploy_key}) when cloning..."
     ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
   else
-    echo "No deploy key found in ${deploy_key}, trying auth-less clone..."
+    echo "> No deploy key found in ${deploy_key}, trying auth-less clone..."
     git clone ${quiet_option} ${repo_web_path}.git ${clone_path}
   fi
 }
+
+#################
+# End functions #
+#################
+
 
 if [ ! -d ${path} ]
 then
@@ -73,6 +82,7 @@ then
   then
     clone "${working_path}"
   fi
+  echo "> Updating repo from remote..."
   cd "${working_path}"
   ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
 
@@ -89,22 +99,18 @@ then
   cd "${orig_pwd}"
 
 else
-  echo "Unknown mode: ${mode}"
+  echo "> Unknown mode: ${mode}"
   exit 99
 fi
 
 deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
-  echo "Found deploy script (${deploy_script}), handing over control..."
+  echo "> Found deploy script (${deploy_script}), handing over control..."
   # chmod u+x "${deploy_script}"
   ${deploy_script}    
 else
-  echo "No deploy script found in ${deploy_script}, done!"
+  echo "> No deploy script found in ${deploy_script}, done!"
 fi
 
-
-###################
-# Functions below #
-###################
 
