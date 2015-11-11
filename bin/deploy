@@ -39,7 +39,7 @@ fi
 function clone {
   clone_path="${1}"
   echo "Cloning ${repo_git_path} into ${clone_path}..."
-  deploy_key="~/.ssh/${org}-deploy-key"
+  deploy_key="/home/${user}/.ssh/${org}-deploy-key"
   if [ -r ${deploy_key} ]
   then 
     echo "Using deploy key (${deploy_key})..."
