@@ -88,7 +88,7 @@ if [ ! -d "${path}/logs" ]
 then
   mkdir -p "${path}/logs"
 fi
-chmod -R g+w "${path}/logs"
+(chmod -R g+w "${path}/logs" || true)
 
 if [ $mode == "update" ]
 then
@@ -133,7 +133,7 @@ cd "${working_path}"
 if [ -d craft -a -d craft/storage ]
 then
   output "Looks like a Craft installation, making craft/storage writable by the web server..."
-  chmod -R g+w craft/storage
+  (chmod -R g+w craft/storage || true)
 fi
 
 # Run repo deploy script, if it exists
