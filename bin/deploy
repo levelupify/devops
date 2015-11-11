@@ -82,14 +82,13 @@ output ""
 if [ ! -d "${path}" ]
 then
   mkdir -p "${path}"
-  chown levelup:levelup "${path}"
 fi
 
 if [ ! -d "${path}/logs" ]
 then
   mkdir -p "${path}/logs"
-  chown levelup:levelup "${path}/logs"
 fi
+chmod -R g+w "${path}/logs"
 
 if [ $mode == "update" ]
 then
@@ -101,7 +100,6 @@ then
   if [ ! -d ${working_path} ]
   then
     mkdir -p ${working_path}
-    chown levelup:levelup ${working_path}
   fi
 
   if [ ! -d "${working_path}/.git" ]
@@ -129,11 +127,20 @@ else
   exit 99
 fi
 
+cd "${working_path}"
+
+# Do some special casing for common scenarios
+if [ -d craft -a -d craft/storage ]
+then
+  output "Looks like a Craft installation, making craft/storage writable by the web server..."
+  chmod -R g+w craft/storage
+fi
+
+# Run repo deploy script, if it exists
 deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
   output "Found deploy script (${deploy_script}), handing over control..."
-  cd "${working_path}"
   ${deploy_script} ${target} ${mode}
 else
   output "No deploy script found in ${deploy_script}, done!"
