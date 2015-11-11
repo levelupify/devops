@@ -10,7 +10,7 @@ repo="${org_and_repo_arr[1]}"
 
 repo_web_path="https://bitbucket.org/${org_and_repo}"
 repo_git_path="git@bitbucket.org:${org_and_repo}.git"
-path="/opt/www/${org}/${repo}"
+path="/opt/www/${org}/${repo}/prod"
 working_path="${path}/current"
 
 # --------- DON'T TOUCH BELOW ------------
@@ -66,10 +66,16 @@ function clone {
 #################
 
 
-if [ ! -d ${path} ]
+if [ ! -d "${path}" ]
 then
-  mkdir -p ${path}
-  chown levelup:levelup ${path}
+  mkdir -p "${path}"
+  chown levelup:levelup "${path}"
+fi
+
+if [ ! -d "${path}/logs" ]
+then
+  mkdir -p "${path}/logs"
+  chown levelup:levelup "${path}/logs"
 fi
 
 if [ $mode == "update" ]
