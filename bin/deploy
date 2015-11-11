@@ -13,16 +13,16 @@ repo_git_path="git@bitbucket.org:${org_and_repo}.git"
 path="/opt/www/${org}/${repo}"
 working_path="${path}/current"
 
-output_prefix=">>>"
-
 # --------- DON'T TOUCH BELOW ------------
 orig_pwd="$(pwd)"
 user="$(whoami)"
 deploy_key="/home/${user}/.ssh/${org}-deploy-key"
 quiet_option=""
 quiet_suffix=""
+output_prefix=">>> "
 if [ "${3}" != "" ]
 then
+  output_prefix=""
   quiet_option=" -q "
   quiet_suffix=" > /dev/null 2>&1 "
 fi
@@ -45,13 +45,13 @@ fi
 
 function clone {
   clone_path="${1}"
-  echo "${output_prefix} Cloning ${repo_git_path} into ${clone_path}..."
+  echo "${output_prefix}Cloning ${repo_git_path} into ${clone_path}..."
   if [ -r ${deploy_key} ]
   then 
-    echo "${output_prefix} Using deploy key (${deploy_key}) when cloning..."
+    echo "${output_prefix}Using deploy key (${deploy_key}) when cloning..."
     ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
   else
-    echo "${output_prefix} No deploy key found in ${deploy_key}, trying auth-less clone..."
+    echo "${output_prefix}No deploy key found in ${deploy_key}, trying auth-less clone..."
     git clone ${quiet_option} ${repo_web_path}.git ${clone_path}
   fi
 }
@@ -84,7 +84,7 @@ then
   then
     clone "${working_path}"
   fi
-  echo "${output_prefix} Updating repo from remote..."
+  echo "${output_prefix}Updating repo from remote..."
   cd "${working_path}"
   ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
 
@@ -101,18 +101,18 @@ then
   cd "${orig_pwd}"
 
 else
-  echo "${output_prefix} Unknown mode: ${mode}"
+  echo "${output_prefix}Unknown mode: ${mode}"
   exit 99
 fi
 
 deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
-  echo "${output_prefix} Found deploy script (${deploy_script}), handing over control..."
+  echo "${output_prefix}Found deploy script (${deploy_script}), handing over control..."
   # chmod u+x "${deploy_script}"
   ${deploy_script}    
 else
-  echo "${output_prefix} No deploy script found in ${deploy_script}, done!"
+  echo "${output_prefix}No deploy script found in ${deploy_script}, done!"
 fi
 
 
