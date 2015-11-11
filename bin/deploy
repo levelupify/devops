@@ -16,6 +16,7 @@ working_path="${path}/current"
 # --------- DON'T TOUCH BELOW ------------
 orig_pwd="$(pwd)"
 user="$(whoami)"
+deploy_key="/home/${user}/.ssh/${org}-deploy-key"
 quiet_option=""
 quiet_suffix=""
 if [ "${3}" != "" ]
@@ -39,7 +40,6 @@ fi
 function clone {
   clone_path="${1}"
   echo "Cloning ${repo_git_path} into ${clone_path}..."
-  deploy_key="/home/${user}/.ssh/${org}-deploy-key"
   if [ -r ${deploy_key} ]
   then 
     echo "Using deploy key (${deploy_key})..."
@@ -74,7 +74,7 @@ then
     clone "${working_path}"
   fi
   cd "${working_path}"
-  git pull
+  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
 
 elif [ $mode == "clone" ]
 then
