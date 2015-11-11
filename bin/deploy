@@ -97,7 +97,7 @@ deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
   echo "Found deploy script (${deploy_script}), handing over control..."
-  chmod u+x "${deploy_script}"
+  # chmod u+x "${deploy_script}"
   ${deploy_script}    
 else
   echo "No deploy script found in ${deploy_script}, done!"
