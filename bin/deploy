@@ -156,7 +156,7 @@ fi
 deploy_script="${working_path}/bin/deploy"
 if [ -r ${deploy_script} ]
 then
-  output "Found deploy script (${deploy_script}), handing over control..."
+  output "Found repo deploy script (${deploy_script}), handing over control..."
   ${deploy_script} ${target} ${mode}
 else
   output "No deploy script found in ${deploy_script}, done!"
