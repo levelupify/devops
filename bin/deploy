@@ -3,8 +3,10 @@ set -e
 
 # Config here
 org_and_repo="${1}"
-target="${2}"
-mode="${3}"
+branch="${2}"
+target="${3}"
+mode="${4}"
+extra="${5}"
 IFS='/' read -ra org_and_repo_arr <<< "${org_and_repo}"
 org="${org_and_repo_arr[0]}"
 repo="${org_and_repo_arr[1]}"
@@ -26,7 +28,7 @@ deploy_key="/home/${user}/.ssh/${org}-deploy-key"
 quiet_option=""
 quiet_suffix=""
 output_prefix=">>> "
-if [ "${3}" != "" ]
+if [ "${extra}" != "" ]
 then
   output_prefix=""
   quiet_option=" -q "
@@ -34,6 +36,13 @@ then
 fi
 
 date=$(date "+%Y-%b-%d-%H-%M-%N")
+
+branch_str=""
+# set
+if [ "${branch}" != "master" -a "${mode}" != "HEAD" ]
+then
+  branch_str="origin ${branch}"
+fi
 
 # Sanity check and default assignment for "mode"
 if [ "${mode}" != "update" -a "${mode}" != "clone" ]
@@ -92,7 +101,6 @@ fi
 
 if [ $mode == "update" ]
 then
-
   if [ -L ${working_path} ]
   then
     rm ${working_path}
@@ -106,13 +114,8 @@ then
   then
     clone "${working_path}"
   fi
-  output "Updating repo from remote..."
-  cd "${working_path}"
-  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
-
 elif [ $mode == "clone" ]
 then
-
   cd "${path}"
   clone "${date}"
   if [ -L "current" ]
@@ -121,13 +124,26 @@ then
   fi
   ln -s "${date}" "current"
   cd "${orig_pwd}"
-
 else
   output "Unknown mode: ${mode}"
   exit 99
 fi
 
 cd "${working_path}"
+
+# Handle non-master branch
+if [ "${branch_str}" != "" ]
+then
+  output "Switching to branch '${branch}'..."
+  git co "${branch}"
+fi
+
+# Do git pull if mode == update
+if [ $mode == "update" ]
+then
+  output "Updating repo from remote..."
+  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
+fi
 
 # Do some special casing for common scenarios
 if [ -d craft -a -d craft/storage ]
