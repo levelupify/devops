@@ -135,7 +135,7 @@ cd "${working_path}"
 if [ "${branch_str}" != "" ]
 then
   output "Switching to branch '${branch}'..."
-  git co "${branch}"
+  git checkout "${branch}"
 fi
 
 # Do git pull if mode == update
