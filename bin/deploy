@@ -131,18 +131,19 @@ fi
 
 cd "${working_path}"
 
+# Do git pull if mode == update
+if [ $mode == "update" ]
+then
+  output "Updating repo from remote..."
+  # ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
+  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
+fi
+
 # Handle non-master branch
 if [ "${branch_str}" != "" ]
 then
   output "Switching to branch '${branch}'..."
   git checkout "${branch}"
-fi
-
-# Do git pull if mode == update
-if [ $mode == "update" ]
-then
-  output "Updating repo from remote..."
-  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
 fi
 
 # Do some special casing for common scenarios
