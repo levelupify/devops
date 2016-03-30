@@ -35,10 +35,11 @@ chown root:root "${tmp}/db/postgres.sql"
 rsync -a --exclude .git --exclude node_modules /opt ${tmp}
 rsync -a --exclude .git --exclude node_modules /home ${tmp}
 rsync -a /etc ${tmp}
+rsync -a /var/spool/cron/crontabs ${tmp}
 
 cd ${tmp}
 
-tar -jcvf ../full-backup-${hostname}-${date}.tar.bz2 db opt home etc
+tar -jcvf ../full-backup-${hostname}-${date}.tar.bz2 *
 cd ..
 rm -rf ${tmp}
 
