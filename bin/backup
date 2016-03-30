@@ -41,9 +41,9 @@ cd ${tmp}
 
 tar -jcvf ../full-backup-${hostname}-${date}.tar.bz2 *
 cd ..
-rm -rf ${tmp}
+# rm -rf ${tmp}
 
 cd ${orig_dir}
 
-aws s3 sync ${dst}/ s3://levelup-system-backups/${hostname_full}/
-gsutil rsync -r ${dst} gs://levelup-system-backups/${hostname_full}
+# aws s3 sync ${dst}/ s3://levelup-system-backups/${hostname_full}/
+# gsutil rsync -r ${dst} gs://levelup-system-backups/${hostname_full}
