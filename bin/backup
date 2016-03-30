@@ -33,7 +33,7 @@ su postgres -c "pg_dumpall > ${tmp}/db/postgres.sql"
 chown root:root "${tmp}/db/postgres.sql"
 
 rsync -a --exclude .git --exclude node_modules --exclude datadog-agent /opt ${tmp}
-rsync -a --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp /home ${tmp}
+rsync -a --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp --exclude data-from-amazon1.tar.bz2 --exclude data /home ${tmp}
 rsync -a /etc ${tmp}
 rsync -a /var/spool/cron/crontabs ${tmp}
 
