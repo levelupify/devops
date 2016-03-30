@@ -3,7 +3,7 @@ set -e
 
 PATH=${PATH}:/usr/local/bin
 
-dst=/opt/backup
+dst=/backup
 
 # date=$(date "+%Y-%b-%d-%H-%M-%N")
 
@@ -32,7 +32,7 @@ chown postgres:postgres "${tmp}/db/postgres.sql"
 su postgres -c "pg_dumpall > ${tmp}/db/postgres.sql"
 chown root:root "${tmp}/db/postgres.sql"
 
-rsync -a --exclude .git --exclude node_modules /opt ${tmp}
+rsync -a --exclude .git --exclude node_modules --exclude datadog-agent /opt ${tmp}
 rsync -a --exclude .git --exclude node_modules /home ${tmp}
 rsync -a /etc ${tmp}
 rsync -a /var/spool/cron/crontabs ${tmp}
