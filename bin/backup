@@ -42,7 +42,7 @@ cd ${tmp}
 
 tar -jcvf ../full-backup-${hostname}-${date}.tar.bz2 *
 cd ..
-# rm -rf ${tmp}
+rm -rf ${tmp}
 
 cd ${orig_dir}
 
