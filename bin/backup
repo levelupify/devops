@@ -1,0 +1,48 @@
+#!/bin/bash
+set -e
+
+PATH=${PATH}:/usr/local/bin
+
+dst=/opt/backup
+
+# date=$(date "+%Y-%b-%d-%H-%M-%N")
+
+orig_dir=$(pwd)
+
+hostname="$(hostname -s)"
+hostname_full="$(hostname -f)"
+date=$(date "+%Y-%b-%d")
+tmp=${dst}/tmp
+
+mkdir -p ${dst}
+
+cd ${dst}
+
+if [ -d ${tmp} ]
+then
+  rm -rf ${tmp}
+fi
+
+mkdir -p ${tmp}/db
+
+mysqldump --all-databases > ${tmp}/db/mysql.sql
+
+touch "${tmp}/db/postgres.sql"
+chown postgres:postgres "${tmp}/db/postgres.sql"
+su postgres -c "pg_dumpall > ${tmp}/db/postgres.sql"
+chown root:root "${tmp}/db/postgres.sql"
+
+rsync -a --exclude .git --exclude node_modules /opt ${tmp}
+rsync -a --exclude .git --exclude node_modules /home ${tmp}
+rsync -a /etc ${tmp}
+
+cd ${tmp}
+
+tar -jcvf ../full-backup-${hostname}-${date}.tar.bz2 db opt home etc
+cd ..
+rm -rf ${tmp}
+
+cd ${orig_dir}
+
+aws s3 sync ${dst}/ s3://levelup-system-backups/${hostname_full}/
+gsutil rsync -r ${dst} gs://levelup-system-backups/${hostname_full}
