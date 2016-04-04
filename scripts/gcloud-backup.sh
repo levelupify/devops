@@ -8,7 +8,7 @@ backup_dir="/local/backup"
 
 # ------------- NO CHANGES BELOW THIS LINE ---------------
 datestr=$(date "+%Y-%b-%d-%H-%M-%N")
-cmd="gcloud compute --project \"#{project}\" disks snapshot"
+cmd="gcloud compute --project \"${project}\" disks snapshot"
 
 orig_dir=$(pwd)
 
