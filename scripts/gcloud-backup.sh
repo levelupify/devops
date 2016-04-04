@@ -41,7 +41,7 @@ rsync -av /var/spool/cron/crontabs ${backup_dir}
 cd ${orig_dir}
 
 # Create the actual snapshots
-#{cmd} "data-l1"  --zone "europe-west1-d" --snapshot-names "data-l1--${datestr}"
-#{cmd} "data-l2"  --zone "europe-west1-c" --snapshot-names "data-l2--${datestr}"
-#{cmd} "local-l1" --zone "europe-west1-d" --snapshot-names "local-l1--${datestr}"
-#{cmd} "local-l2" --zone "europe-west1-c" --snapshot-names "local-l2--${datestr}"
+${cmd} "data-l1"  --zone "europe-west1-d" --snapshot-names "data-l1--${datestr}"
+${cmd} "data-l2"  --zone "europe-west1-c" --snapshot-names "data-l2--${datestr}"
+${cmd} "local-l1" --zone "europe-west1-d" --snapshot-names "local-l1--${datestr}"
+${cmd} "local-l2" --zone "europe-west1-c" --snapshot-names "local-l2--${datestr}"
