@@ -1,1 +1,1665 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sear",
+				"searchCriteria"
+			],
+			[
+				"isN",
+				"isNavButtonDisabled"
+			],
+			[
+				"free",
+				"freeTextValue"
+			],
+			[
+				"call",
+				"callbackQueue"
+			],
+			[
+				"useper",
+				"usePersonalFileBrowser"
+			],
+			[
+				"usePer",
+				"usePersonalFileBrowser"
+			],
+			[
+				"file-bwo",
+				"file-browser-header-height"
+			],
+			[
+				"header",
+				"header-height"
+			],
+			[
+				"org-sw",
+				"org-switcher-width"
+			],
+			[
+				"org",
+				"org-switcher-width"
+			],
+			[
+				"active",
+				"activeNode"
+			],
+			[
+				"getco",
+				"getCommonParams"
+			],
+			[
+				"toggle",
+				"toggleAddUserToGroup"
+			],
+			[
+				"decline",
+				"declineOrgInvite"
+			],
+			[
+				"up",
+				"updatedOrg"
+			],
+			[
+				"getC",
+				"getCurrentOrg"
+			],
+			[
+				"handle",
+				"handleAllowRequestsChange"
+			],
+			[
+				"handleIn",
+				"handleInviteFieldKeyDown"
+			],
+			[
+				"membership",
+				"membershipRequests"
+			],
+			[
+				"groups-li",
+				"groups-list-width"
+			],
+			[
+				"groups",
+				"groups-list-width"
+			],
+			[
+				"new",
+				"newOrgForm"
+			],
+			[
+				"vtabs",
+				"vtabs-width"
+			],
+			[
+				"uniq",
+				"uniqueNameId"
+			],
+			[
+				"assign",
+				"assigned-gravatar"
+			],
+			[
+				"request",
+				"requestNotificationPermission"
+			],
+			[
+				"elig",
+				"eligibleRe"
+			],
+			[
+				"sett",
+				"settingsOpen"
+			],
+			[
+				"load",
+				"loadSource"
+			],
+			[
+				"handlePri",
+				"handlePriceModelChange"
+			],
+			[
+				"incom",
+				"incomingCampaignId"
+			],
+			[
+				"eligi",
+				"eligibleAds"
+			],
+			[
+				"sing",
+				"singleLineBodyRe"
+			],
+			[
+				"create",
+				"createdNode"
+			],
+			[
+				"browsing",
+				"browsingRevisionsFor"
+			],
+			[
+				"preview",
+				"previewingRevision"
+			],
+			[
+				"previ",
+				"previewNode"
+			],
+			[
+				"diff",
+				"diffNodes"
+			],
+			[
+				"parseMark",
+				"parseMarkdownTabs"
+			],
+			[
+				"commentP",
+				"commentProviders"
+			],
+			[
+				"act",
+				"activeClass"
+			],
+			[
+				"findFi",
+				"findFirstByKey"
+			],
+			[
+				"closeFile",
+				"closeFileEditor"
+			],
+			[
+				"close",
+				"closeFileBrowser"
+			],
+			[
+				"brow",
+				"browseFiles"
+			],
+			[
+				"browseFiles",
+				"browseFilesOptions"
+			],
+			[
+				"insert",
+				"insertUrlAtCursor"
+			],
+			[
+				"brows",
+				"browsingFiles"
+			],
+			[
+				"treat",
+				"treatAsCategory"
+			],
+			[
+				"dele",
+				"deleteAccount"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"decli",
+				"declineButtonText"
+			],
+			[
+				"confirm",
+				"confirmationMessage"
+			],
+			[
+				"conf",
+				"confirmationMessage"
+			],
+			[
+				"cons",
+				"consumedShares"
+			],
+			[
+				"node",
+				"nodeForSecretId"
+			],
+			[
+				"skip",
+				"skipSetState"
+			],
+			[
+				"bottomDrop",
+				"bottomDropTarget"
+			],
+			[
+				"acti",
+				"activateSearch"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"access",
+				"accessAndShare"
+			],
+			[
+				"newUser",
+				"newUserTabId"
+			],
+			[
+				"setT",
+				"setTab"
+			],
+			[
+				"titl",
+				"titleUndoData"
+			],
+			[
+				"ac",
+				"activeNode"
+			],
+			[
+				"sync",
+				"syncClientData"
+			],
+			[
+				"existin",
+				"existingUser"
+			],
+			[
+				"han",
+				"handleHeadingKeyUp"
+			],
+			[
+				"io",
+				"io"
+			],
+			[
+				"syn",
+				"syncWithServer"
+			],
+			[
+				"Ex",
+				"ExportOverlay"
+			],
+			[
+				"Pub",
+				"PublishOverlay"
+			],
+			[
+				"Note",
+				"NoteSettingsOverlay"
+			],
+			[
+				"redo",
+				"redoCommands"
+			],
+			[
+				"repl",
+				"replaceNodes"
+			],
+			[
+				"upda",
+				"updatedTextNode"
+			],
+			[
+				"is",
+				"isDragValid"
+			],
+			[
+				"sa",
+				"savedSelection"
+			],
+			[
+				"co",
+				"costs"
+			],
+			[
+				"str",
+				"strings"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/bin/deploy",
+			"settings":
+			{
+				"buffer_size": 3512,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/scripts/gcloud-generic-server.sh",
+			"settings":
+			{
+				"buffer_size": 2388,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/scripts/gcloud-backup.sh",
+			"settings":
+			{
+				"buffer_size": 1301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/bin/backup",
+			"settings":
+			{
+				"buffer_size": 1152,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "shell",
+		"selected_items":
+		[
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"gs",
+				"Git: Status"
+			],
+			[
+				"push",
+				"Git: Push"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import os; os.getenv('PATH')",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops"
+	],
+	"file_history":
+	[
+		"/etc/hosts",
+		"/Users/stian/dev/node/notebase/.gitignore",
+		"/Users/stian/dev/node/notebase/misc/db_stuff.sql",
+		"/Users/stian/dev/node/notebase/client/components/node_item.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/key_commands.jsx",
+		"/Users/stian/dev/node/notebase/client/js/misc.js",
+		"/Users/stian/dev/node/notebase/client/js/keys.js",
+		"/Users/stian/dev/node/notebase/client/lib/app/comm_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/app/lifecycle_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/components/org_switcher.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/app/drag_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/app/misc_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/components/current_node.jsx",
+		"/Users/stian/dev/node/notebase/client/components/bullet.jsx",
+		"/Users/stian/dev/node/notebase/README.md",
+		"/Users/stian/dev/node/notebase/client/containers/app.jsx",
+		"/Users/stian/dev/node/notebase/client/components/nodes.jsx",
+		"/Users/stian/dev/node/notebase/server/controllers/misc.js",
+		"/Users/stian/dev/node/notebase/client/components/special_pages.jsx",
+		"/Users/stian/dev/node/notebase/client/components/register_form.jsx",
+		"/Users/stian/dev/node/notebase/client/js/tab.js",
+		"/Users/stian/dev/node/notebase/public/static/filter-worker.js",
+		"/Users/stian/dev/node/notebase/public/static/filter-paths-worker.js",
+		"/Users/stian/dev/node/notebase/client/components/orgs_overlay.jsx",
+		"/Users/stian/dev/node/notebase/server/models/org.js",
+		"/Users/stian/dev/node/notebase/client/components/switcher.jsx",
+		"/Users/stian/dev/node/notebase/client/components/node_context_menu.jsx",
+		"/Users/stian/dev/node/notebase/client/components/bookmark_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/project_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/shared/constants.js",
+		"/Users/stian/dev/node/notebase/client/js/node.js",
+		"/Users/stian/dev/node/notebase/server/models/node.js",
+		"/Users/stian/dev/node/notebase/server/models/user.js",
+		"/Users/stian/dev/node/notebase/server/controllers/xhr_endpoints.js",
+		"/Users/stian/dev/node/notebase/client/components/public_pages.jsx",
+		"/Users/stian/dev/node/notebase/config/production.js",
+		"/Users/stian/dev/node/notebase/config/default.js",
+		"/Users/stian/dev/node/notebase/server/controllers/xhr_methods.js",
+		"/Users/stian/dev/node/notebase/server/static/bookmarklet.js",
+		"/Users/stian/dev/node/notebase/server/controllers/public.js",
+		"/Users/stian/dev/node/notebase/index.js",
+		"/Users/stian/dev/node/notebase/config/local.js",
+		"/Users/stian/dev/node/notebase/package.json",
+		"/Users/stian/dev/node/notebase/client/stylesheets/app.css",
+		"/Users/stian/dev/node/notebase/client/endpoints/main.js",
+		"/Users/stian/dev/node/notebase/dev/webpack.config.js",
+		"/Users/stian/dev/node/notebase/client/stylesheets/variables/_global-variables.css",
+		"/Users/stian/dev/node/notebase/client/components/due_list.jsx",
+		"/Users/stian/dev/node/notebase/client/stylesheets/components/_due-list.css",
+		"/Users/stian/dev/node/notebase/client/stylesheets/components/_app-sidebar.css",
+		"/Users/stian/dev/node/notebase/client/stylesheets/_base.css",
+		"/Users/stian/dev/node/notebase/client/components/header.jsx",
+		"/Users/stian/dev/node/notebase/client/components/sidebar.jsx",
+		"/Users/stian/dev/node/notebase/client/components/wrapper.jsx",
+		"/Users/stian/dev/node/notebase/worker.js",
+		"/Users/stian/dev/node/notebase/scripts/find-dropbox-users.js",
+		"/Users/stian/dev/node/notebase/scripts/populate_ltrees.js",
+		"/Users/stian/dev/node/notebase/scripts/reindex-es.js",
+		"/Users/stian/dev/node/notebase/test/worker-test.js",
+		"/Users/stian/dev/node/notebase/client/components/file_browser.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/app/tab_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/components/inbox.jsx",
+		"/Users/stian/dev/node/notebase/client/components/tree_node.jsx",
+		"/Users/stian/dev/node/notebase/client/.eslintrc.js",
+		"/Users/stian/dev/node/notebase/client/stylesheets/components/_due_list.css",
+		"/Users/stian/dev/node/notebase/client/stylesheets/components/_sidebar.css",
+		"/Users/stian/dev/node/notebase/client/lib/app_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/mixins/mixins.jsx",
+		"/Users/stian/dev/node/notebase/client/components/datepicker/date-util.js",
+		"/Users/stian/dev/node/notebase/client/components/datepicker/date_input.jsx",
+		"/Users/stian/dev/node/notebase/.eslintrc.js",
+		"/Users/stian/dev/node/notebase/server/lib/ws.js",
+		"/Users/stian/dev/node/notebase/server/lib/boot.js",
+		"/Users/stian/dev/node/notebase/server/lib/init_routes.js",
+		"/Users/stian/dev/node/notebase/server/lib/syncer.js",
+		"/Users/stian/dev/node/notebase/server/lib/strip-markdown.js",
+		"/Users/stian/dev/node/notebase/dev/dev-server.js",
+		"/Users/stian/dev/node/notebase/client/lib/app/editor_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/components/file_editor.jsx",
+		"/Users/stian/dev/node/notebase/client/components/revision_browser.jsx",
+		"/Users/stian/dev/node/notebase/client/components/main_editor_ctrl.jsx",
+		"/Users/stian/dev/node/notebase/client/components/list_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/note_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/site_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/user_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/tab_settings_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/share_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/shares_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/embedded_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/export_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/admin_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/invite_beta_overlay.jsx",
+		"/Users/stian/dev/node/notebase/client/components/mini_editor.jsx",
+		"/Users/stian/dev/node/notebase/client/components/share_access_level.jsx",
+		"/Users/stian/dev/node/notebase/client/components/tab.jsx",
+		"/Users/stian/dev/node/notebase/client/components/datepicker/calendar.jsx",
+		"/Users/stian/dev/node/notebase/client/components/datepicker.jsx",
+		"/Users/stian/dev/node/notebase/client/components/assigner/assign_picker.jsx",
+		"/Users/stian/dev/node/notebase/client/lib/app/file_methods.jsx",
+		"/Users/stian/dev/node/notebase/server/controllers/special_methods.js",
+		"/Users/stian/dev/node/notebase/src/jsx/app.jsx",
+		"/Users/stian/dev/node/notebase/lib/server/controllers/xhr_methods.js",
+		"/Users/stian/dev/node/notebase/lib/server/controllers/xhr_endpoints.js",
+		"/Users/stian/dev/node/notebase/lib/init_routes.js",
+		"/Users/stian/dev/node/notebase/lib/boot.js",
+		"/Users/stian/dev/node/notebase/server/controllers/special_endpoints.js",
+		"/Users/stian/dev/node/notebase/server/models/share.js",
+		"/Users/stian/dev/node/notebase/server/models/org_request.js",
+		"/Users/stian/dev/node/notebase/server/models/org_invite.js",
+		"/Users/stian/dev/node/notebase/server/models/group.js",
+		"/Users/stian/dev/node/notebase/server/lib/util.js",
+		"/Users/stian/dev/node/notebase/server/models/generic.js",
+		"/Users/stian/dev/node/notebase/server/lib/init_models.js",
+		"/Users/stian/dev/node/notebase/node_modules/babel-plugin-react-transform/node_modules/array-find/find.js",
+		"/Users/stian/dev/node/notebase/client/jsx/components/wrapper.jsx",
+		"/Users/stian/dev/node/notebase/client/jsx/lib/app/lifecycle_methods.jsx",
+		"/Users/stian/dev/node/notebase/client/jsx/app.jsx",
+		"/Users/stian/dev/node/notebase/node_modules/babel-plugin-react-transform/lib/index.js",
+		"/Users/stian/dev/node/notebase/dev/webpack-common-setup.js",
+		"/Users/stian/dev/node/notebase/dev/webpack.production.config.js",
+		"/Users/stian/dev/node/notebase/server/models/user_count.js",
+		"/Users/stian/dev/node/notebase/server/controllers/share.js",
+		"/Users/stian/dev/node/notebase/misc/stuff/share.js",
+		"/Users/stian/dev/node/notebase/src/js/misc.js",
+		"/Users/stian/dev/node/notebase/src/jsx/lib/key_commands.jsx",
+		"/Users/stian/dev/node/notebase/src/js/keys.js",
+		"/Users/stian/dev/node/notebase/src/jsx/lib/app/editor_methods.jsx",
+		"/Users/stian/dev/node/notebase/src/jsx/lib/app/misc_methods.jsx"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"",
+			"Customer",
+			"",
+			", this.saveSuccessCallback",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"${tmp}",
+			"moveDown",
+			"indexOf",
+			"changes",
+			"nodeWith",
+			"active",
+			"highlight",
+			"allNodes",
+			"data.orgs",
+			"setRoot(",
+			"setTab: fu",
+			"setRoot(",
+			"rootNode",
+			"pathInfo",
+			"filter:",
+			"filter",
+			"savedData",
+			"savedData.nodes",
+			"get-subtree",
+			"toggleSwitcher",
+			"Switcher",
+			"shift",
+			"window.open",
+			"setApp",
+			"Node.setRoot",
+			"setAppState({rootNode",
+			"updateAll",
+			"tab",
+			"params.tab",
+			"react-addons-perf",
+			"sensitive",
+			"ctxOpen",
+			"indicators",
+			"this.props.inbox",
+			"Inbox",
+			"this.props.inbox",
+			"_.",
+			"inbox",
+			"this.props.inbox",
+			"path",
+			"inbox",
+			"path",
+			"handleMouse",
+			"index",
+			"rootId",
+			"isRefresh",
+			"noLoad",
+			"Register",
+			"isListView",
+			"prev",
+			"ul",
+			".refs",
+			"li",
+			"Inbox",
+			"setAppState:",
+			"Hah! false",
+			"updateAllNodes",
+			"loadInitial",
+			".closest",
+			"next",
+			"_this",
+			"}",
+			"={",
+			"allNotes",
+			"notes",
+			"forceUpdate",
+			"Assigner",
+			"Assign",
+			"Assigner",
+			"Day",
+			"_customDomain",
+			"Not Found",
+			"app.log.",
+			"addons",
+			"console.log",
+			"this.",
+			"params.body",
+			"updateBody",
+			"share",
+			"accessLevel",
+			"share",
+			"rootNode",
+			"accessLevel",
+			"contentEditable",
+			"user",
+			"typekit",
+			"nimbus",
+			"accessLevel",
+			"dst",
+			"client",
+			"Pris",
+			"021",
+			"filePath",
+			"objectType",
+			"drawMarkers(",
+			"Kommer for salg",
+			".previous",
+			"previous",
+			"pushState",
+			"parseInt",
+			"paramTran",
+			"searchString",
+			"#register-form",
+			".register-form",
+			"\"register-form\"",
+			"Form",
+			"range-input",
+			"rendering SC",
+			"polyfill()",
+			"Unable to find GeoL",
+			"detail-view?id",
+			"mode=map",
+			"types",
+			"visibleStatuses",
+			"upcoming was changed",
+			"strToDate",
+			"unitShowings",
+			"pristine",
+			".format",
+			"moment",
+			"doQuery",
+			"console.lo",
+			"step",
+			"query",
+			".searching",
+			"helpers",
+			"cust/",
+			"roisland.dev"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"${backup_dir}",
+			"node",
+			"this",
+			",",
+			": ",
+			"app.logger.",
+			"finished",
+			"upcoming",
+			"this.props.search.state.",
+			"this.props.search.state",
+			"className=",
+			"timestamp with time zone",
+			"character varying",
+			"this.props.app.headingForUserOrOrg()",
+			"resetInfoSent",
+			"emailHarvested",
+			"forgotPassword",
+			"registerForShare",
+			"authForShare",
+			"node/levelup",
+			"log.error(e)",
+			"'shepherd-button-secondary'",
+			"\"https://notebase.io/static",
+			"\"http://localhost:3199/",
+			"\"https://notebase.io/",
+			"this.props.app.state",
+			" annonsekilde",
+			"advertiser_source",
+			"AdvertiserSource",
+			"adtype",
+			"Adtype",
+			"passback",
+			"Passback",
+			"passback",
+			"Passback",
+			"customer",
+			"Customer",
+			"url_mapping",
+			"UrlMapping",
+			"site",
+			"Site",
+			"mapping",
+			"Mapping",
+			"mapping",
+			"Mapping",
+			"mapping",
+			"Mapping",
+			"className=",
+			"\"\\1\"",
+			"\"$1\"",
+			"\"\\1\"",
+			"\"",
+			"\\n",
+			"\\n[",
+			"essens_tmpl_83",
+			"essens_tmpl_80",
+			"\\n",
+			"essens_tmpl_83",
+			"essens_tmpl_82",
+			"essens_tmpl_81",
+			"essens_tmpl_80",
+			".",
+			"x",
+			"options",
+			"",
+			"minieditor",
+			"",
+			"className=",
+			"if (this.debug) ",
+			"td>",
+			"$1",
+			"’",
+			"Notebase",
+			"customer",
+			"customerId",
+			"newPrevId",
+			"newParentId",
+			"('POST' !== t",
+			"res.body.",
+			"res.body",
+			"window._app.editorCursorPosition",
+			"={",
+			"},",
+			"$1: ",
+			"div.title[",
+			"titleUndoData",
+			"div.data[contenteditable]",
+			"_this.props.getCommonParams().",
+			"getCommonParams",
+			"Notebase",
+			"Node",
+			"newNode",
+			"[node]",
+			"node.",
+			"options",
+			"(db, TABLE",
+			"url",
+			"title",
+			"title:",
+			"prev_id:",
+			"addNode",
+			"ctrl",
+			"node.",
+			" htmlFor=",
+			"colSpan",
+			" htmlFor=",
+			"colSpan",
+			"className=",
+			"nodeThatPointsTo",
+			"window._app.pending",
+			"",
+			"Note.setTextUndo(note.id,",
+			"newPreviousSiblingId",
+			"this.props.node",
+			"this.state",
+			"href=\"http://stortinget.no/",
+			"href=\"http://stortinget.no",
+			"src=\"http://stortinget.no/",
+			"essens_rt_1",
+			"url(\"/images/glj",
+			"src=\"/javascripts/glj",
+			"src=\"/images/glj",
+			"essens_tmpl_3",
+			" ",
+			"",
+			" ",
+			", ",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/bin/deploy",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3512,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								732,
+								760
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/scripts/gcloud-generic-server.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1855,
+								1855
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"transient_mode_on": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/scripts/gcloud-backup.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1301,
+								1301
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/stian/Dropbox (Personal)/Private/proj/misc/levelup-devops/bin/backup",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								925
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 70.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "levelop-devops.sublime-project",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"back",
+				"bin/backup"
+			],
+			[
+				"deploy",
+				"bin/deploy"
+			],
+			[
+				"depl",
+				"bin/deploy"
+			],
+			[
+				"misc",
+				"client/js/misc.js"
+			],
+			[
+				"keycommands",
+				"client/lib/key_commands.jsx"
+			],
+			[
+				"paths",
+				"public/static/filter-paths-worker.js"
+			],
+			[
+				"constants",
+				"shared/constants.js"
+			],
+			[
+				"base",
+				"client/stylesheets/_base.css"
+			],
+			[
+				"miscme",
+				"client/lib/app/misc_methods.jsx"
+			],
+			[
+				"node",
+				"client/js/node.js"
+			],
+			[
+				"commme",
+				"client/lib/app/comm_methods.jsx"
+			],
+			[
+				"miscmeth",
+				"client/lib/app/misc_methods.jsx"
+			],
+			[
+				"miscmet",
+				"client/lib/app/misc_methods.jsx"
+			],
+			[
+				"filter",
+				"public/static/filter-worker.js"
+			],
+			[
+				"filterworker",
+				"public/static/filter-worker.js"
+			],
+			[
+				"switc",
+				"client/components/switcher.jsx"
+			],
+			[
+				"pathswo",
+				"public/static/filter-paths-worker.js"
+			],
+			[
+				"switcher",
+				"client/components/switcher.jsx"
+			],
+			[
+				"filterpaths",
+				"public/static/filter-paths-worker.js"
+			],
+			[
+				"sidebar",
+				"client/stylesheets/components/_app-sidebar.css"
+			],
+			[
+				"duelist",
+				"client/components/due_list.jsx"
+			],
+			[
+				"lifec",
+				"client/lib/app/lifecycle_methods.jsx"
+			],
+			[
+				"global",
+				"client/stylesheets/variables/_global-variables.css"
+			],
+			[
+				"appside",
+				"client/stylesheets/components/_app-sidebar.css"
+			],
+			[
+				"wrapper",
+				"client/components/wrapper.jsx"
+			],
+			[
+				"appcss",
+				"client/stylesheets/app.css"
+			],
+			[
+				"main",
+				"client/endpoints/main.js"
+			],
+			[
+				"webpack",
+				"dev/webpack.config.js"
+			],
+			[
+				"life",
+				"client/lib/app/lifecycle_methods.jsx"
+			],
+			[
+				"orgs",
+				"client/components/orgs_overlay.jsx"
+			],
+			[
+				"modelsorg",
+				"server/models/org.js"
+			],
+			[
+				"filte",
+				"public/static/filter-worker.js"
+			],
+			[
+				"filterpath",
+				"public/static/filter-paths-worker.js"
+			],
+			[
+				"filterath",
+				"public/static/filter-paths-worker.js"
+			],
+			[
+				"worker",
+				"public/static/filter-worker.js"
+			],
+			[
+				"keycomman",
+				"client/lib/key_commands.jsx"
+			],
+			[
+				"lifecy",
+				"client/lib/app/lifecycle_methods.jsx"
+			],
+			[
+				"nodeitem",
+				"client/components/node_item.jsx"
+			],
+			[
+				"treenode",
+				"client/components/tree_node.jsx"
+			],
+			[
+				"context",
+				"client/components/node_context_menu.jsx"
+			],
+			[
+				"inbox",
+				"client/components/inbox.jsx"
+			],
+			[
+				"nodecontext",
+				"client/components/node_context_menu.jsx"
+			],
+			[
+				"nodes",
+				"client/components/nodes.jsx"
+			],
+			[
+				"currentnode",
+				"client/components/current_node.jsx"
+			],
+			[
+				"bullet",
+				"client/components/bullet.jsx"
+			],
+			[
+				"bookm",
+				"client/components/bookmark_settings_overlay.jsx"
+			],
+			[
+				"nodeconte",
+				"client/components/node_context_menu.jsx"
+			],
+			[
+				"bookmark",
+				"client/components/bookmark_settings_overlay.jsx"
+			],
+			[
+				"projectsettings",
+				"client/components/project_settings_overlay.jsx"
+			],
+			[
+				"tab",
+				"client/js/tab.js"
+			],
+			[
+				"dbstuff",
+				"misc/db_stuff.sql"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"index",
+				"index.js"
+			],
+			[
+				"local",
+				"config/local.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"commmet",
+				"client/lib/app/comm_methods.jsx"
+			],
+			[
+				"miscmetho",
+				"client/lib/app/misc_methods.jsx"
+			],
+			[
+				"keys",
+				"client/js/keys.js"
+			],
+			[
+				"lifecyc",
+				"client/lib/app/lifecycle_methods.jsx"
+			],
+			[
+				"drag",
+				"client/lib/app/drag_methods.jsx"
+			],
+			[
+				"app",
+				"client/containers/app.jsx"
+			],
+			[
+				"org",
+				"client/components/org_switcher.jsx"
+			],
+			[
+				"header",
+				"client/components/header.jsx"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"db",
+				"misc/db_stuff.sql"
+			],
+			[
+				"produ",
+				"config/production.js"
+			],
+			[
+				"defa",
+				"config/default.js"
+			],
+			[
+				"register",
+				"client/components/register_form.jsx"
+			],
+			[
+				"public",
+				"client/components/public_pages.jsx"
+			],
+			[
+				"xhrmetho",
+				"server/controllers/xhr_methods.js"
+			],
+			[
+				"special",
+				"client/components/special_pages.jsx"
+			],
+			[
+				"commmetho",
+				"client/lib/app/comm_methods.jsx"
+			],
+			[
+				"xhr",
+				"server/controllers/xhr_endpoints.js"
+			],
+			[
+				"xhrme",
+				"server/controllers/xhr_methods.js"
+			],
+			[
+				"regis",
+				"client/components/register_form.jsx"
+			],
+			[
+				"node.",
+				"client/js/node.js"
+			],
+			[
+				"strip",
+				"server/lib/strip-markdown.js"
+			],
+			[
+				"syncer",
+				"server/lib/syncer.js"
+			],
+			[
+				"initroutes",
+				"server/lib/init_routes.js"
+			],
+			[
+				"boot",
+				"server/lib/boot.js"
+			],
+			[
+				"ws.js",
+				"server/lib/ws.js"
+			],
+			[
+				"modelnode",
+				"server/models/node.js"
+			],
+			[
+				"modeluser",
+				"server/models/user.js"
+			],
+			[
+				"bookmarklet",
+				"server/static/bookmarklet.js"
+			],
+			[
+				"controllerspub",
+				"server/controllers/public.js"
+			],
+			[
+				"eslint",
+				"client/.eslintrc.js"
+			],
+			[
+				"esli",
+				"client/.eslintrc.js"
+			],
+			[
+				"routes",
+				"server/lib/init_routes.js"
+			],
+			[
+				"contextmen",
+				"client/components/node_context_menu.jsx"
+			],
+			[
+				"sitesettings",
+				"client/components/site_settings_overlay.jsx"
+			],
+			[
+				"publicpages",
+				"client/components/public_pages.jsx"
+			],
+			[
+				"dateinput",
+				"client/components/datepicker/date_input.jsx"
+			],
+			[
+				"dateutil",
+				"client/components/datepicker/date-util.js"
+			],
+			[
+				"mixins",
+				"client/mixins/mixins.jsx"
+			],
+			[
+				"dragmet",
+				"client/lib/app/drag_methods.jsx"
+			],
+			[
+				"editormetho",
+				"client/lib/app/editor_methods.jsx"
+			],
+			[
+				"tabmet",
+				"client/lib/app/tab_methods.jsx"
+			],
+			[
+				"specialpa",
+				"client/components/special_pages.jsx"
+			],
+			[
+				"filebrowser",
+				"client/components/file_browser.jsx"
+			],
+			[
+				"fileeditor",
+				"client/components/file_editor.jsx"
+			],
+			[
+				"revisionbrow",
+				"client/components/revision_browser.jsx"
+			],
+			[
+				"mainedit",
+				"client/components/main_editor_ctrl.jsx"
+			],
+			[
+				"listsettings",
+				"client/components/list_settings_overlay.jsx"
+			],
+			[
+				"notesettings",
+				"client/components/note_settings_overlay.jsx"
+			],
+			[
+				"projesettings",
+				"client/components/project_settings_overlay.jsx"
+			],
+			[
+				"bookmarksett",
+				"client/components/bookmark_settings_overlay.jsx"
+			],
+			[
+				"usersettings",
+				"client/components/user_settings_overlay.jsx"
+			],
+			[
+				"tabsettings",
+				"client/components/tab_settings_overlay.jsx"
+			],
+			[
+				"shareoverl",
+				"client/components/share_overlay.jsx"
+			],
+			[
+				"sharesoverlay",
+				"client/components/shares_overlay.jsx"
+			],
+			[
+				"embeddedoverlay",
+				"client/components/embedded_overlay.jsx"
+			],
+			[
+				"exportoverl",
+				"client/components/export_overlay.jsx"
+			],
+			[
+				"adminoverlay",
+				"client/components/admin_overlay.jsx"
+			],
+			[
+				"invitebeta",
+				"client/components/invite_beta_overlay.jsx"
+			],
+			[
+				"minieditor",
+				"client/components/mini_editor.jsx"
+			],
+			[
+				"shareaccesslev",
+				"client/components/share_access_level.jsx"
+			],
+			[
+				"orgsoverlay",
+				"client/components/orgs_overlay.jsx"
+			],
+			[
+				"tabjsx",
+				"client/components/tab.jsx"
+			],
+			[
+				"calendar",
+				"client/components/datepicker/calendar.jsx"
+			],
+			[
+				"datepicker",
+				"client/components/datepicker.jsx"
+			],
+			[
+				"assignpicker",
+				"client/components/assigner/assign_picker.jsx"
+			],
+			[
+				"fileme",
+				"client/lib/app/file_methods.jsx"
+			],
+			[
+				"endmain",
+				"client/endpoints/main.js"
+			],
+			[
+				"ws",
+				"server/lib/ws.js"
+			],
+			[
+				"init",
+				"server/lib/init_routes.js"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"appjsx",
+				"client/jsx/app.jsx"
+			],
+			[
+				"dev-server",
+				"dev/dev-server.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "login web",
+		"selected_items":
+		[
+			[
+				"login web",
+				"~/dev/node/hma-login-web/support/hma-login-web.sublime-project"
+			],
+			[
+				"login",
+				"~/dev/node/hma-login-web/support/hma-login-web.sublime-project"
+			],
+			[
+				"notebase",
+				"~/dev/node/notebase/support/notebase.sublime-project"
+			],
+			[
+				"rois",
+				"~/dev/php/craft/roisland-main-web/support/roisland-main-web.sublime-project"
+			],
+			[
+				"roisl",
+				"~/dev/php/craft/roisland-main-web/support/roisland-main-web.sublime-project"
+			],
+			[
+				"admin",
+				"~/dev/node/hma-admin-web/support/hma-admin-web.sublime-project"
+			],
+			[
+				"roisland",
+				"~/dev/php/craft/roisland-main-web/support/roisland-main-web.sublime-project"
+			],
+			[
+				"hma",
+				"~/dev/node/hma-admin-web/support/hma-admin-web.sublime-project"
+			],
+			[
+				"",
+				"~/dev/node/hma-admin-web/support/hma-admin-web.sublime-project"
+			],
+			[
+				"hma admin",
+				"~/dev/node/hma-admin-web/support/hma-admin-web.sublime-project"
+			],
+			[
+				"hma login",
+				"~/dev/node/hma-login-web/support/hma-login-web.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
