@@ -30,7 +30,7 @@ chown root:root "${pgfile}"
 rsync -av --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp --exclude data /home ${backup_dir}
 
 # Backup /root
-rsync -av --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp /root ${backup_dir}
+rsync -av --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp --exclude from-hetzner /root ${backup_dir}
 
 # Backup /etc
 rsync -av /etc ${backup_dir}
