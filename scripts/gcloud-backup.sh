@@ -10,6 +10,10 @@ backup_dir="/local/backup"
 datestr=$(date "+%Y-%b-%d-%H-%M-%N")
 cmd="gcloud compute --project \"#{project}\" disks snapshot"
 
+orig_dir=$(pwd)
+
+cd ${backup_dir}
+
 mkdir -p ${backup_dir}/db
 
 # Backup MySQL
@@ -23,16 +27,18 @@ su postgres -c "pg_dumpall > ${pgfile}"
 chown root:root "${pgfile}"
 
 # Backup home dirs
-rsync -a --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp --exclude data /home ${backup_dir}
+rsync -av --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp --exclude data /home ${backup_dir}
 
 # Backup /root
-rsync -a --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp /root ${backup_dir}
+rsync -av --exclude .git --exclude node_modules --exclude .npm --exclude .node-gyp /root ${backup_dir}
 
 # Backup /etc
-rsync -a /etc ${backup_dir}
+rsync -av /etc ${backup_dir}
 
 # Backup crontabs
-rsync -a /var/spool/cron/crontabs ${backup_dir}
+rsync -av /var/spool/cron/crontabs ${backup_dir}
+
+cd ${orig_dir}
 
 # Create the actual snapshots
 #{cmd} "data-l1"  --zone "europe-west1-d" --snapshot-names "data-l1--${datestr}"
