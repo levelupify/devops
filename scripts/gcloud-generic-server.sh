@@ -6,14 +6,22 @@ sudo apt-get update
 sudo apt-get upgrade -yy
 
 # Install essentials
-sudo apt-get install -yy xfsprogs emacs24-nox git zsh
+sudo apt-get install -yy xfsprogs emacs24-nox git zsh ruby
 
 # Make sure we mount the /data partition, if one is available to us
-grep LABEL=data /etc/fstab
+grep LABEL=data1 /etc/fstab
 if [ ${$?} == "1" ]
 then
-  sudo mkdir /data
+  sudo mkdir /mnt/data1
   echo "LABEL=data1    /mnt/data1      xfs  defaults  0 0" >> /etc/fstab
+fi
+
+# Make sure we mount the /local partition, if one is available to us
+grep LABEL=local1 /etc/fstab
+if [ ${$?} == "1" ]
+then
+  sudo mkdir /local
+  echo "LABEL=local1    /local      xfs  defaults  0 0" >> /etc/fstab
 fi
 
 # Install mosh
@@ -35,7 +43,13 @@ sudo apt-get install -yy nginx
 
 # Install php-fpm
 sudo apt-get install php5-fpm -yy
+
+# Install Craft requirements
 sudo apt-get install php5-mysql -yy
+sudo apt-get install php5-imagick -yy
+sudo apt-get install php5-curl -yy
+sudo apt-get install php5-mcrypt -yy
+php5enmod mcrypt
 
 # Install LTS version of node.js
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
