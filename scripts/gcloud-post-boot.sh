@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hash runurl 2>/dev/null || { 
+hash xrunurl 2>/dev/null || { 
   sudo add-apt-repository ppa:alestic/ppa -yy
   sudo apt-get update -qq
   sudo apt-get install -yy runurl
