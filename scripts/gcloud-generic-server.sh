@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get upgrade -yy
 
 # Install essentials
-sudo apt-get install -yy xfsprogs emacs24-nox git zsh ruby
+sudo apt-get install -yy xfsprogs emacs24-nox git zsh ruby redis-server
 
 # Make sure we mount the /data partition, if one is available to us
 grep LABEL=data1 /etc/fstab
@@ -75,6 +75,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
 sudo apt-get update
 sudo apt-get install -yy postgresql-9.5
+sudo apt-get install -yy postgresql-contrib
 
 # Install mysql
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password '
