@@ -31,7 +31,7 @@ sudo apt-get install mosh -yy
 
 # Install runurl
 sudo add-apt-repository ppa:alestic/ppa -yy
-sudo apt-get update
+sudo apt-get update -qq
 sudo apt-get install -yy runurl
 
 # Install latest version of nginx
