@@ -1,0 +1,58 @@
+#!/bin/sh
+#
+# runurl - Download a URL and run as a program, passing in arguments
+#
+# Copyright (C) 2009 Eric Hammond <ehammond@thinksome.com>
+#
+
+error() { echo "$@" 1>&2; }
+fail() { [ $# -eq 0 ] || error "${BNAME}:" "$1"; exit ${2:-1}; }
+debug() { [ "$DEBUG" = "0" ] || error "${BNAME}:" "$@"; }
+cleanup() { [ -z "${TEMP_D}" -o ! -d "${TEMP_D}" ] || rm -Rf "${TEMP_D}"; }
+
+DEBUG="0"
+TEMP_D=""
+BNAME=${0##*/}
+
+while [ $# -gt 0 ]; do
+  case $1 in
+    -\?|--help) pod2text "${0}"; exit 0;;
+    -d|--debug) DEBUG=1;                    shift 1 ;;
+    -*)         fail "Unrecognized option: $1 (try --help)";;
+    *)          url="$1";                   shift 1; break ;;
+  esac
+done
+
+[ -n "$url" ] || fail "Missing URL specification (try --help)"
+
+trap cleanup 0
+
+TEMP_D=$(mktemp -d ${TEMPDIR:-/tmp}/${BNAME}.XXXXXX) &&
+  runfile="${TEMP_D}/runfile" && wgetfile="${TEMP_D}/wget.out" ||
+  fail "failed to make tempdir"
+
+debug "downloading $url"
+
+wget                           \
+  --retry-connrefused          \
+  --tries=20                   \
+  "--output-document=$runfile" \
+  "--output-file=$wgetfile"    \
+  "$url"
+
+wgetstatus=$?
+if [ $wgetstatus != 0 ]; then
+  cat $wgetfile >&2
+  fail "wget failed: $wgetstatus" "${wgetstatus}"
+fi
+
+chmod 700 "${runfile}" || fail "failed to change perms of ${runfile}"
+
+debug "running"
+$runfile "$@"
+
+exitstatus=$?
+
+debug "exit status $exitstatus"
+
+exit $exitstatus
