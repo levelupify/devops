@@ -35,8 +35,8 @@ debug "downloading $url"
 
 curl                           \
   --retry 20                   \
-  "--output $runfile"          \
-  "$url" 2>&1 $curlfile
+  --output "${runfile}"        \
+  "$url" 2>&1 "${curlfile}"
 
 curlstatus=$?
 if [ $curlstatus != 0 ]; then
