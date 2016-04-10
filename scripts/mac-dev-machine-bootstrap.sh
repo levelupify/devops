@@ -133,10 +133,10 @@ brew_install_if_not_installed dnsmasq
 
 # Install nginx+php
 brew_install_if_not_installed nginx
-brew_install_if_not_installed php55
+brew_install_if_not_installed php56
 
 # Install Craft dependencies
-brew_install_if_not_installed php55-mcrypt
+brew_install_if_not_installed php56-mcrypt
 brew_install_if_not_installed imagemagick
 
 # Install data stores

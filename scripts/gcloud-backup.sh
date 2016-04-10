@@ -10,8 +10,6 @@ backup_dir="/local/backup"
 datestr=$(date "+%Y-%m-%d-%H-%M-%N")
 cmd="gcloud compute disks snapshot"
 zone=$(curl -sH 'Metadata-Flavor: Google' 'http://metadata/computeMetadata/v1/instance/zone' | ruby -e 'puts gets.split("/").last')
-echo ${zone}
-exit 0
 
 hostname_short=$(hostname --short)
 
