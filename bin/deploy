@@ -13,7 +13,7 @@ repo="${org_and_repo_arr[1]}"
 
 repo_web_path="https://bitbucket.org/${org_and_repo}"
 repo_git_path="git@bitbucket.org:${org_and_repo}.git"
-path="/opt/www/${org}/${repo}/${target}"
+path="/local/www/${org}/${repo}/${target}"
 working_path="${path}/current"
 
 # --------- DON'T TOUCH BELOW ------------
