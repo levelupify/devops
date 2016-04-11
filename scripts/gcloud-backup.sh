@@ -43,6 +43,15 @@ rsync -a /var/spool/cron/crontabs ${backup_dir}
 
 cd ${orig_dir}
 
+# Make the databases as consistent as possible
+su postgres -c "echo 'CHECKPOINT;' | psql"
+
 # Create the actual snapshots
+sync
+fsfreeze -f /mnt/data1
 ${cmd} "data-${hostname_short}"  --zone "${zone}" --snapshot-names "data-${hostname_short}--${datestr}"
+fsfreeze -u /mnt/data1
+sync
+fsfreeze -f /local
 ${cmd} "local-${hostname_short}"  --zone "${zone}" --snapshot-names "local-${hostname_short}--${datestr}"
+fsfreeze -u /local
