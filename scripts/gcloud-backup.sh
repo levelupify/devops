@@ -48,10 +48,10 @@ su postgres -c "echo 'CHECKPOINT;' | psql"
 
 # Create the actual snapshots
 sync
-fsfreeze -f /mnt/data1
+/sbin/fsfreeze -f /mnt/data1
 ${cmd} "data-${hostname_short}"  --zone "${zone}" --snapshot-names "data-${hostname_short}--${datestr}"
-fsfreeze -u /mnt/data1
+/sbin/fsfreeze -u /mnt/data1
 sync
-fsfreeze -f /local
+/sbin/fsfreeze -f /local
 ${cmd} "local-${hostname_short}"  --zone "${zone}" --snapshot-names "local-${hostname_short}--${datestr}"
-fsfreeze -u /local
+/sbin/fsfreeze -u /local
