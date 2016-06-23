@@ -1,7 +1,7 @@
 # Setup here
 repo   = `git ls-remote --get-url`.split(':')[1].gsub(/\.git$/, '').gsub(/[\\\n]/, '')
 branch = `git rev-parse --symbolic-full-name --abbrev-ref HEAD`.gsub(/[\\\n]/, '')
-cmd    = "runurl https://bitbucket.org/levelupify/devops/raw/master/bin/deploy"
+cmd    = "runurl https://github.com/levelupify/devops/raw/master/bin/deploy"
 common = "#{cmd} #{repo} #{branch}"
 
 # role :web_servers, "oleherland.no"
