@@ -11,8 +11,15 @@ IFS='/' read -ra org_and_repo_arr <<< "${org_and_repo}"
 org="${org_and_repo_arr[0]}"
 repo="${org_and_repo_arr[1]}"
 
-repo_web_path="https://bitbucket.org/${org_and_repo}"
-repo_git_path="git@bitbucket.org:${org_and_repo}.git"
+if [ "${org}" == "levelup-clients" ]
+then
+  repo_web_path="https://bitbucket.org/${org_and_repo}"
+  repo_git_path="git@bitbucket.org:${org_and_repo}.git"
+else
+  repo_web_path="https://github.com/${org_and_repo}"
+  repo_git_path="git@github.com:${org_and_repo}.git"
+fi
+
 path="/local/www/${org}/${repo}/${target}"
 working_path="${path}/current"
 
