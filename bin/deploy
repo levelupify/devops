@@ -77,14 +77,14 @@ function output {
 function clone {
   clone_path="${1}"
   output "Cloning ${repo_git_path} into ${clone_path}..."
-  if [ -r ${deploy_key} ]
-  then 
-    output "Using deploy key (${deploy_key}) when cloning..."
-    ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
-  else
-    output "No deploy key found in ${deploy_key}, trying auth-less clone..."
-    git clone ${quiet_option} ${repo_web_path}.git ${clone_path}
-  fi
+  # if [ -r ${deploy_key} ]
+  # then 
+  #   output "Using deploy key (${deploy_key}) when cloning..."
+  #   ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
+  # else
+    # output "No deploy key found in ${deploy_key}, trying auth-less clone..."
+    git clone ${quiet_option} ${repo_web_path} ${clone_path}
+  # fi
 }
 
 
