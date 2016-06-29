@@ -142,8 +142,8 @@ cd "${working_path}"
 if [ $mode == "update" ]
 then
   output "Updating repo from remote..."
-  # ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
-  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
+  ### ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
+  # ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
 fi
 
 # Handle non-master branch
