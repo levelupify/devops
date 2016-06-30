@@ -7,6 +7,8 @@ common = "#{cmd} #{repo} #{branch}"
 # role :web_servers, "oleherland.no"
 role :web_servers, "web1.levelup.no", "web2.levelup.no"
 
+ssh_options[:forward_agent] = true
+
 set :user, "levelup"
 
 desc "Deploy Levelup Web Site to production"
