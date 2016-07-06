@@ -83,7 +83,7 @@ function clone {
   #   ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
   # else
     # output "No deploy key found in ${deploy_key}, trying auth-less clone..."
-    git clone ${quiet_option} ${repo_web_path} ${clone_path}
+  git clone ${quiet_option} ${repo_git_path} ${clone_path}
   # fi
 }
 
