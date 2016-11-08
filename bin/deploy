@@ -162,17 +162,17 @@ then
 fi
 
 # Check for .levelup.json and run handler script if it exists
-repo_config="${working_path}/.levelup.json"
+repo_config="${working_path}/levelup.json"
 if [ -r ${repo_config} ]
 then
-  output "Found .levelup.json, downloading repo config handler script..."
+  output "Found levelup.json, downloading repo config handler script..."
   handlerfile="/tmp/levelup_cfg_handler-$(date '+%Y-%m-%d-%H-%M-%N')"
   curl -so "${handlerfile}" "https://raw.githubusercontent.com/levelupify/devops/master/scripts/repo-config-handler.sh?cachebuster=$(date '+%Y-%m-%d-%H-%M-%N')"
   chmod u+x ${handlerfile}
   output "Executing repo config handler script..."
   ${handlerfile} ${target} ${mode}
 else
-  output "No .levelup.json found, moving on..."
+  output "No levelup.json found, moving on..."
 fi
 
 # Run repo deploy script, if it exists
