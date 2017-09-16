@@ -9,6 +9,8 @@ role :notebase_servers, "h1.notebase.io"
 
 ssh_options[:forward_agent] = true
 
+default_run_options[:pty] = true
+
 if repo.match(/notebase/)
   set :user, "app"
   role_name = :notebase_servers
