@@ -77,14 +77,14 @@ function output {
 function clone {
   clone_path="${1}"
   output "Cloning ${repo_git_path} into ${clone_path}..."
-  if [ -r ${deploy_key} ]
-  then 
-    output "Using deploy key (${deploy_key}) when cloning..."
-    ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
-  else
-    output "No deploy key found in ${deploy_key}, trying auth-less clone..."
-    git clone ${quiet_option} ${repo_web_path}.git ${clone_path}
-  fi
+  # if [ -r ${deploy_key} ]
+  # then 
+  #   output "Using deploy key (${deploy_key}) when cloning..."
+  #   ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git clone ${quiet_option} ${repo_git_path} ${clone_path}"
+  # else
+    # output "No deploy key found in ${deploy_key}, trying auth-less clone..."
+  git clone ${quiet_option} ${repo_git_path} ${clone_path}
+  # fi
 }
 
 
@@ -142,8 +142,9 @@ cd "${working_path}"
 if [ $mode == "update" ]
 then
   output "Updating repo from remote..."
-  # ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
-  ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
+  ### ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${branch_str} ${quiet_option}"
+  # ssh-agent bash -c "ssh-add ${deploy_key} ${quiet_suffix} && git pull ${quiet_option}"
+  git pull ${quiet_option}
 fi
 
 # Handle non-master branch
@@ -158,6 +159,20 @@ if [ -d craft -a -d craft/storage ]
 then
   output "Looks like a Craft installation, making craft/storage writable by the web server..."
   (chmod -fR g+w craft/storage || true)
+fi
+
+# Check for .levelup.json and run handler script if it exists
+repo_config="${working_path}/levelup.json"
+if [ -r ${repo_config} ]
+then
+  output "Found levelup.json, downloading repo config handler script..."
+  handlerfile="/tmp/levelup_cfg_handler-$(date '+%Y-%m-%d-%H-%M-%N')"
+  curl -so "${handlerfile}" "https://raw.githubusercontent.com/levelupify/devops/master/scripts/repo-config-handler.sh?cachebuster=$(date '+%Y-%m-%d-%H-%M-%N')"
+  chmod u+x ${handlerfile}
+  output "Executing repo config handler script..."
+  ${handlerfile} ${target} ${mode}
+else
+  output "No levelup.json found, moving on..."
 fi
 
 # Run repo deploy script, if it exists

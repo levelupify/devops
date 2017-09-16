@@ -4,30 +4,22 @@ branch = `git rev-parse --symbolic-full-name --abbrev-ref HEAD`.gsub(/[\\\n]/, '
 cmd    = "runurl https://raw.githubusercontent.com/levelupify/devops/master/bin/deploy"
 common = "#{cmd} #{repo} #{branch}"
 
+# role :web_servers, "oleherland.no"
 role :web_servers, "web1.levelup.no", "web2.levelup.no"
-role :notebase_servers, "h1.notebase.io"
 
-ssh_options[:forward_agent] = true
+set :user, "levelup"
 
-if repo.match(/notebase/)
-  set :user, "app"
-  role_name = :notebase_servers
-else
-  set :user, "levelup"
-  role_name = :web_servers
-end
-
-desc "Deploy Web Site to production"
-task :deploy, :roles => role_name do
+desc "Deploy Levelup Web Site to production"
+task :deploy, :roles => :web_servers do
   run "#{common} prod update quiet"
 end
 
-desc "Deploy Web Site to staging"
-task :stage, :roles => role_name do
+desc "Deploy Levelup Web Site to staging"
+task :stage, :roles => :web_servers do
   run "#{common} staging update quiet"
 end
 
-desc "Deploy Web Site to development"
-task :dev, :roles => role_name do
+desc "Deploy Levelup Web Site to development"
+task :dev, :roles => :web_servers do
   run "#{common} dev update quiet"
 end
