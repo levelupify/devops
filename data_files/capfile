@@ -36,5 +36,5 @@ end
 
 desc "Flush PageSpeed cache on servers"
 task :flush_pagespeed_cache, :roles => role_name do
-  run "sudo touch /var/ngx_pagespeed_cache/cache.flush"
+  execute :sudo, :touch, '/var/ngx_pagespeed_cache/cache.flush'
 end
