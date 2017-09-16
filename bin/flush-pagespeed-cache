@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+sudo -i
+touch /var/ngx_pagespeed_cache/cache.flush
