@@ -10,7 +10,7 @@ role :notebase_servers, "h1.notebase.io"
 
 ssh_options[:forward_agent] = true
 
-default_run_options[:pty] = true
+# default_run_options[:pty] = true
 
 if repo.match(/notebase/)
   set :user, "app"
@@ -35,7 +35,8 @@ task :dev, :roles => role_name do
   run "#{common} dev update quiet"
 end
 
+set :user, "ole"
 desc "Flush PageSpeed cache on servers"
 task :flush_pagespeed_cache, :roles => role_name do
-  run "#{flushCacheCmd}"
+  run "sudo touch /var/ngx_pagespeed_cache/cache.flush"
 end
