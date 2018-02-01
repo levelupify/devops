@@ -6,6 +6,7 @@ common = "#{cmd} #{repo} #{branch}"
 
 role :web_servers, "web1.levelup.no", "web2.levelup.no"
 role :notebase_servers, "h1.notebase.io"
+role :properinvest_servers, "35.204.83.23"
 
 ssh_options[:forward_agent] = true
 
@@ -14,6 +15,9 @@ ssh_options[:forward_agent] = true
 if repo.match(/notebase/)
   set :user, "app"
   role_name = :notebase_servers
+elsif repo.match(/properinvest/)
+  set :user, "properinvest"
+  role_name = :properinvest_servers
 else
   set :user, "levelup"
   role_name = :web_servers
