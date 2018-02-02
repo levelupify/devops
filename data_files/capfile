@@ -6,7 +6,7 @@ common = "#{cmd} #{repo} #{branch}"
 
 role :web_servers, "web1.levelup.no", "web2.levelup.no"
 role :notebase_servers, "h1.notebase.io"
-role :properinvest_servers, "35.204.83.23"
+role :properinvest_servers, "properinvest.com"
 
 ssh_options[:forward_agent] = true
 
